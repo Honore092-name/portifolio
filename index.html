@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tags for SEO -->
+  <meta name="description" content="I'm a web developer specializing in responsive and interactive websites. View my portfolio to see recent projects.">
+  <meta name="keywords" content="Web Developer, Portfolio, HTML, CSS, JavaScript, React, Frontend, Backend, Rwanda Developer">
+  <meta name="author" content="Your Name">
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="prodev | Web Developer Portfolio">
+  <meta property="og:description" content="Explore my portfolio with projects in web development, design, and more.">
+  <meta property="og:image" content="https://yourwebsite.com/assets/og-image.jpg">
+  <meta property="og:url" content="https://prodev.me">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images (1).png" type="image/x-icon" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow">
     <title>portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <head>
@@ -11,13 +28,12 @@
     <body>
      <header>
         <a href="#"class="logo">prodev</a>
-
         <nav>
-            <a href="#"class="active">Home</a>
-            <a href="#"class="active">services</a>
-            <a href="#"class="active">skills</a>
-            <a href="#"class="active">Experience</a>
-            <a href="#"class="active">contact us</a>
+            <a href="index.html"class="active">Home</a>
+            <a href="service.html"class="active">services</a>
+            <a href="skills.html"class="active">skills</a>
+            <a href="experience.html"class="active">Experience</a>
+            <a href="contact.html"class="active">contact us</a>
         </nav>
      </header>
      <section class="home">
@@ -26,18 +42,31 @@
         </div>
         <div class="home_content">
             <h1>Hi,it's<span>prodev</span></h1>
-            <h3 class="typing_text">Im a<span></span></h3>
+            <h3 class="typing_text">Im a<span id="dynamic-text"></span></h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem velit et quasi alias minima corrupti tempora nisi consequuntur commodi, fugit officiis eveniet molestias maiores, iure sapiente laboriosam consequatur sed laborum?</p><br>
-            <div class="social-links">
-                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin github-icon" ></i></a>
-                <a href="https://github.com" target="_blank"><i class="fab fa-github github-icon"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram github-icon"></i></a>
-            </div><br><br>
+            <div class="social-icons">
+                <a href="https://github.com/Honore092-name" target="_blank" class="icon github">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="icon linkedin">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://facebook.com/itx plaiboi" target="_blank" class="icon facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/yourusername" target="_blank" class="icon twitter">
+                  <i class="fab fa-x-twitter"></i> 
+                </a>
+                <a href="https://instagram.com/yourusername" target="_blank" class="icon instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div><br><br>
             <div>
-            <a href="#"class="btn">Hire me</a>
+            <a href="contact.html"class="btn">Hire me</a>
         </div>
         </div>
-
      </section>
+<script type="application/ld+json" src="script.js"></script>
+     
 </body>
 </html>
