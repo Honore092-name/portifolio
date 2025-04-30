@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" href="images (1).png" type="image/x-icon" />
+  <link rel="icon" href="ima" type="image/x-icon" />
 
   <!-- Robots -->
   <meta name="robots" content="index, follow">
@@ -26,16 +26,44 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
       </head>    
     <body>
-     <header>
-        <a href="#"class="logo">prodev</a>
-        <nav>
-            <a href="index.html"class="active">Home</a>
-            <a href="service.html"class="active">services</a>
-            <a href="skills.html"class="active">skills</a>
-            <a href="experience.html"class="active">Experience</a>
-            <a href="contact.html"class="active">contact us</a>
-        </nav>
-     </header>
+      <header class="header">
+        <div class="container">
+            <a href="#" class="logo">prodev</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="service.html" class="nav-link">Services</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="experience.html" class="nav-link">Experience</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Navigation">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden">
+        <div class="menu-content">
+            <button id="close-menu-btn" class="close-menu-btn" aria-label="Close Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="service.html" class="nav-link">Services</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="experience.html" class="nav-link">Experience</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
      <section class="home">
         <div class="home_img">
             <img src="images.png">
@@ -66,7 +94,7 @@
         </div>
         </div>
      </section>
-<script type="application/ld+json" src="script.js"></script>
+<script src="script.js"></script>
      
 </body>
 </html>

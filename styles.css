@@ -27,6 +27,157 @@ body{
     color: white;
 }
 
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #8b5cf6;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    justify-content: left;
+}
+
+/* Custom CSS for navigation links */
+.nav-link {
+    font-family: 'Inter', sans-serif;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+}
+.active{
+   color: black;
+}
+
+/* Header styles */
+.header {
+    background-color: #fff;
+    padding: 30px;
+    margin: 20px;
+}
+
+.container {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: none; 
+}
+
+.nav.show {
+    display: block; 
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    margin-left: 1.5rem;
+}
+
+.hamburger-btn {
+    display: block; 
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+.hamburger-btn:hover {
+    color: #3b82f6;
+}
+
+#mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 50;
+}
+
+#mobile-menu.show {
+    display: block;
+}
+
+#mobile-menu .menu-content {
+    background-color: #fff;
+    width: 80%;
+    max-width: 320px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    padding: 1.5rem;
+}
+
+#mobile-menu .close-menu-btn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.5rem;
+    outline: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+#mobile-menu .close-menu-btn:hover {
+    color: #3b82f6;
+}
+
+#mobile-menu nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mobile-menu nav ul li {
+    margin-bottom: 1rem;
+}
+
+#mobile-menu nav ul li a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+#mobile-menu nav ul li a:hover {
+    color: #3b82f6;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .nav {
+        display: block; /* Show on medium screens and up */
+    }
+
+    .hamburger-btn {
+        display: none; /* Hide on medium screens and up */
+    }
+
+    #mobile-menu {
+        display: none !important; /* Ensure mobile menu is hidden on larger screens */
+    }
+}
 header{
     position: fixed;
     top: 0;
@@ -54,14 +205,15 @@ logo:hover{
     transform: scale(1,1);
     
 }
-nav a{
+
+nav  a{
     font-size: 1.8rem;
     color: rgb(15, 1, 1);
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3ease;
     border-bottom: 3px solid transparent;
-    background-color: rgb(255, 255, 255);
+    
 }
 nav a:hover,nav a:active{
     color: rgb(255, 255, 255);
@@ -73,40 +225,9 @@ nav a:hover,nav a:active{
 }
 
 @media(max-width:995px){
-    nav{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid rgba(118, 13, 238, 0.981);
-        border-bottom: 3px solid rgba(118, 13, 238, 0.981);
-        border-bottom-left-radius: 0rem;
-        padding: 1rem solid;
-        background-color: rgb(255, 255, 255);
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-        width: 100%;
-        display: block;
-        padding: 10px;
-        background-color: none;
-        justify-content: space-between;
-        margin: 10px;
-        gap: 2.5rem;
-
-    }
-
-nav:active{
-    display: block;
-    font-size: 2rem;
-    margin: 3 rem 0;
-}
-
-nav a:hover ,nav a:active{
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border-bottom: 0.5 rem solid rgba(118, 13, 238, 0.981);
 
 }
-}
+
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
@@ -340,7 +461,7 @@ body {
     text-align: center;
     font-size: 36px;
     margin-bottom: 50px;
-    color: #0c0c0c;
+    color: rgb(255, 255, 255);
 }
 
 .skills-container {

@@ -1,3 +1,56 @@
+
+const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navElement = document.querySelector('.nav');
+
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("show");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href').slice(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Close menu on outside click
+        document.addEventListener('click', (event) => {
+            if (mobileMenu.classList.contains('show') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Responsive behavior for showing/hiding nav
+        function updateNavDisplay() {
+            if (window.innerWidth >= 768) {
+                navElement.classList.add('show');
+            } else {
+                navElement.classList.remove('show');
+            }
+        }
+
+        window.addEventListener('resize', updateNavDisplay);
+        updateNavDisplay(); // Call on initial load
+
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
 
@@ -10,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const message = document.getElementById('message').value;
 
         if (!name || !email || !subject || !message) {
-            alert('Please fill in all fields.');
+            alert('Where are the f****n are you ging without filling my fields.');
             return;
         }
 
@@ -26,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
   const counters = document.querySelectorAll('.number');
-  const speed = 100; // Lower number = faster count
+  const speed = 80; // Lower number = faster count
 
   counters.forEach(counter => {
     const updateCount = () => {
